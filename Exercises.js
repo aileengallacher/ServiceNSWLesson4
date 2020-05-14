@@ -44,7 +44,7 @@ function thisIsMyResult (person, num, nameMatch) {
     let firstCond = num == person.age;   // sets the variable firstCond to ensure num equals person.age
     let secondCond = person.name != nameMatch;   // sets the variable secondCond to ensure person.name and nameMatch do not match
 
-    if (firstCond && secondCond) {
+    if (firstCond && secondCond) {      
         return true
     }
    else {
@@ -52,8 +52,7 @@ function thisIsMyResult (person, num, nameMatch) {
    }
     }
 
-
-console.log(thisIsMyResult({name: "Aileen",
+console.log(thisIsMyResult({name: "Aileen",       // test program by changing values!
 age: 37},
 21,
 "Aileen"))
