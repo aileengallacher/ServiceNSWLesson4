@@ -1,4 +1,4 @@
-let pets = [
+let pets = [                                // object is pets containing these elements
     {
         name: "Rex",
         age: 4,
@@ -18,7 +18,7 @@ let pets = [
     }
 ];
 
-let people = [
+let people = [                           // object is people containing these elements
     {
         name: "Luke",
         id: 42
@@ -31,17 +31,18 @@ let people = [
     }
 ];
 
-function mapPet(pet){
+function mapPet(pet){                          // declares a function , makes pet a property
     function findPersonById(owner) {
         return owner.id == pet.ownerId;
     }
     let owner = people.find(findPersonById);
     return {
-        name: pet.name,              // the new array will contain these values
+        name: pet.name,
         age: pet.age,
-        owner: owner.name
+        owner: owner.name,
+        id: owner.id
     };
 }
 
-let detailedPets = pets.map(mapPet);
+let detailedPets = pets.map(mapPet);    // makes a new array THIS IS THE FIRST STEP WHEN IT IS RUN
 console.log(detailedPets);
